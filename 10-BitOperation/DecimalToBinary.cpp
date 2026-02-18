@@ -11,9 +11,12 @@ int DtoB(int n){
     return ans;
 }
 int main(){
+
 int num; 
 cout<<"Enter the number :";
+
 cin>>num;
+
 cout<<"The binary number is "<<DtoB(num)<<endl;
 
     return 0;
