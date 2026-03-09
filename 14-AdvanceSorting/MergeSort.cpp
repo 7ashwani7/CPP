@@ -37,7 +37,6 @@ using namespace std;
       delete[] left;
       delete[] right;
    }
-
    void divide(int arr[], int low, int high) {
       if (low < high) {
          int mid = (low + high) / 2;
@@ -46,7 +45,6 @@ using namespace std;
          merge(arr, low, mid, high);
       }
    }
-
    int main() {
       int arr[] = {38, 27, 43, 3, 9, 82, 10};
       int n = sizeof(arr) / sizeof(arr[0]);
