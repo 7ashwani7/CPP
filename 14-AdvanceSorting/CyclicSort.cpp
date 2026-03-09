@@ -13,7 +13,6 @@ void cyclicSort(int nums[], int n) {
         }
     }
 }
-
 int main() {
       int arr[]= {3, 5, 2, 1, 4};
       int n = sizeof(arr) / sizeof(arr[0]);
