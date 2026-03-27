@@ -1,0 +1,47 @@
+//Matrix rotation clockwise at 90 degrees
+#include <iostream>
+using namespace std;
+
+// Function to rotate matrix by 90 degrees clockwise
+void rotateMatrix90Clockwise(int mat[][100], int n) {
+    // Transpose the matrix
+    for (int i = 0; i < n; i++) {
+        for (int j = i; j < n; j++) {
+            swap(mat[i][j], mat[j][i]);
+        }
+    }
+    // Reverse each row
+    for (int i = 0; i < n; i++) {
+        for (int j = 0, k = n - 1; j < k; j++, k--) {
+            swap(mat[i][j], mat[i][k]);
+        }
+    }
+}
+
+int main() {
+    int n;
+    cout << "Enter size of square matrix: ";
+    cin >> n;
+    int mat[100][100];
+
+    cout << "Enter matrix elements:\n";
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < n; j++)
+            cin >> mat[i][j];
+      cout << "Matrix before 90 degree clockwise rotation:\n";
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++)
+            cout << mat[i][j] << " ";
+        cout << endl;
+    }       
+
+    rotateMatrix90Clockwise(mat, n);
+
+    cout << "Matrix after 90 degree clockwise rotation:\n";
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++)
+            cout << mat[i][j] << " ";
+        cout << endl;
+    }
+    return 0;
+}
